@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Your Dream House</title>
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	rel="stylesheet">
+</head>
+
+<body>
+	<div class="container bg-light justify-content-center">
+		<div class="row">
+			<div class="col col-md-6 offset-md-3">
+				<div class="col-md-6 offset-md-3">
+					<br />
+					<h1 class="text-center">Question 1</h1>
+					<form th:action="@{/questions}" th:object="${yourdreamhouse}"
+						method="post" autocomplete="off">
+						<div class="form-group">
+						<input type="text"  placeholder="Answer1"
+								class="form-control" />	
+						</div>
+						<div class="form-group">
+							<button class="btn btn-md btn-primary btn-block" name="Submit"
+								value="Submit" type="Submit">Submit >></button>
+						</div>
+					</form>
+					
+					<div class="first" th:if="${yourDreamHouse != null}">
+					<h1 class="text-center">Question 2</h1>
+					<form th:action="@{/}" th:object="${yourdreamhouse}"
+						method="post" autocomplete="off">
+						<div class="form-group">
+						<input type="text"  placeholder="Answer2"
+								class="form-control" />	
+						</div>
+						<div class="form-group">
+							<button class="btn btn-md btn-primary btn-block" name="Submit"
+								value="Submit" type="Submit">Submit >></button>
+						</div>
+						</form>
+					</div>
+							
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
