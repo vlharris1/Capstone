@@ -22,10 +22,34 @@ public class YourDreamHouseController {
 	        return "questions";
 	    }
 		
-				
+		@GetMapping("/dingbat")
+	    public String dingbat() {
+	        return "dingbat";
+	    }
+		
+		@GetMapping("/ranch")
+	    public String ranch() {
+	        return "ranch";
+	    }
+		
+		@GetMapping("/mcmansion")
+	    public String mcmansion() {
+	        return "mcmansion";
+	    }
+		
+		@GetMapping("/colonial")
+	    public String colonial() {
+	        return "colonial";
+	    }
+		
+		@GetMapping("/victorian")
+	    public String victorian() {
+	        return "victorian";
+	    }
+					
 		@PostMapping("/questions")
 		public String questionsSubmit(@ModelAttribute YourDreamHouse yourDreamHouse, Model model) {
 			model.addAttribute("YourDreamHouse", yourDreamHouse);
-			return "questions";
-		}
-}
+			return "questions";	
+		}			
+}	
