@@ -11,3 +11,10 @@ body, html {
   background-size: cover;
   position: relative;
 }
+
+.container-fluid {
+	background-color: #555;
+	color: white;
+	position: absolute;
+	bottom:0;
+}
