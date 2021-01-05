@@ -12,7 +12,7 @@
 
     
 		<div class="container bg-light justify-content-center">
-		<h1 class="text-center">Sign up now for your Housewarming gift.</h1>	
+		<h1 class="text-center">Sign up now for your free Housewarming gift.</h1>	
 		<form class="text-center" action="#" th:action="@{/registrationform}" th:object="${user}" method="post">
         <p style="font-size:20px">Name: <input type="text" th:field="*{name}" /></p>
         <p style="font-size:20px">Email: <input type="text" th:field="*{email}"/></p>
@@ -29,4 +29,17 @@
     
 		
 	</body>
+		<footer class="container-fluid">
+  <div class="row">
+      <div class="col-md-4">&#169; YourDreamHouse</div>
+      <div class="col-md-4">
+          <ul class="nav nav-pills justify-content-center">
+              <li><a href="/"> &#124; Home  &#124; </a></li>
+          </ul>
+      </div>
+      <div class="col-md-4">
+          <p class="text-right"><a href="registrationform">&#124; Sign Up &#124;</a></p>
+      </div>
+  </div>
+</footer>
 </html>
